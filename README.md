@@ -6,6 +6,8 @@ This program cant go beyond its capability.
 
 Limitations:- 
 
-You cant find root values in it 
+(A)You cant find root values in it 
 
-No decimal values 
+(B)No decimal values 
+
+And I would try to improve it  
