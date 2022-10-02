@@ -4,7 +4,7 @@ from hashlib import new
 from tkinter.messagebox import YES
 
 
-print("\t\tWelcome to this Mathematics Game")
+print("\t\tWelcome to this Mathematics Game ")
 print("Type 1 for Rectangle related values")
 print("Type 2 for Square related values")
 print("Type 3 for Triangle related values")
@@ -14,6 +14,7 @@ print("type 6 for Trapezium related values")
 print("type 7 for Rhombus related values")
 print("type 8 for Kite related values")
 
+print("\nBefore starting read this file (Readme)")
 Select= int(input("\nEnter Your choice: "))
 choice =Select
 
