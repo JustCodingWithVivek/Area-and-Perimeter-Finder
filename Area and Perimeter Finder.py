@@ -38,7 +38,7 @@ if choice==2:
     print("This the Area of Square: ",s*s)
     decision = input("\nType Yes For Finding Perimeter else No ")
     if decision=="Yes":  
-        print("/nThis is the Perimeter of Square: ",4*s)
+        print("\nThis is the Perimeter of Square: ",4*s)
         print("Thankyou for using Mathematics Game")
     else:
         print("Thankyou for using Mathematics Game")
@@ -72,7 +72,7 @@ if choice==4:
         print("The Area of the Circle is:",area)
         decision = input("\nType Yes For Finding Perimeter else No ")
         if decision=="Yes":
-            ("/nThis is the Circumfernce of Circle",2*pi*r)
+            print("\nThis is the Circumfernce of Circle",2*pi*r)
             print("Thankyou for using Mathematics Game")
         elif decision=="No":
             print("Thankyou for using Mathematics Game")
@@ -85,7 +85,7 @@ if choice==4:
         print("The Area of the Circle is:",area)
         decision = input("\nType Yes For Finding Perimeter else No ")
         if decision=="Yes":
-            print("/nThis is the Circumfernce of Circle",2*pi*r)
+            print("\nThis is the Circumfernce of Circle",2*pi*r)
             print("Thankyou for using Mathematics Game")
         elif decision=="No":
             print("Thankyou for using Mathematics Game")
@@ -152,5 +152,6 @@ if choice==8:
     else:
         print("Thankyou for using Mathematics Game")
 
-else:
+elif choice>=9:
     print("\nInvalid input!!!")
+    print("Next Time Put Values Properly")
