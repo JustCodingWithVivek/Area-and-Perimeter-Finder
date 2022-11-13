@@ -4,7 +4,7 @@ from hashlib import new
 from tkinter.messagebox import YES
 
 
-print("\t\tWelcome to this Mathematics Game ")
+print("\t\tWelcome to this Mathematics Game")
 print("Type 1 for Rectangle related values")
 print("Type 2 for Square related values")
 print("Type 3 for Triangle related values")
@@ -14,7 +14,6 @@ print("type 6 for Trapezium related values")
 print("type 7 for Rhombus related values")
 print("type 8 for Kite related values")
 
-print("\nBefore starting read this file (Readme)")
 Select= int(input("\nEnter Your choice: "))
 choice =Select
 
@@ -69,10 +68,14 @@ if choice==3:
    
 #This is for finding Circle related values---(CCJustCodingWithVivek)
 if choice==4:
-    print("You Entered and Finding Circle Related Values")
-    area= int(input("\nEnter the area:"))
-    pi=3.14
-    print("\nThis is the Area of Circle",pi*area*area)
+    d=(input("Do you want to use the value of π in decimal ??(Yes/No) :"))
+
+if d=="Yes":
+    print("π = 3.14")
+    x = 3.14
+    r = float(input("Enter the Radius of the Circle: "))
+    area = x*(r**2)
+    print("The Area of the Circle is:",area)
     print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
     decision = int(input())
     new =bool(decision)
@@ -82,6 +85,26 @@ if choice==4:
         print("Thankyou for using Mathematics Game")
     elif new==0:
         print("Thankyou for using Mathematics Game")
+    
+elif d=="No":
+    print("π = 22/7")
+    pie = 22/7
+    r = float(input("Enter the Radius of the Circle: "))
+    area = float(pie)*float(r)*float(r)
+    print("The Area of the Circle is:",area)
+    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
+    decision = int(input())
+    new =bool(decision)
+    if new==True:
+        radius=int(input("Enter the Radius"))
+        print("/nThis is the Circumfernce of Circle",2*pi*radius)
+        print("Thankyou for using Mathematics Game")
+    elif new==0:
+        print("Thankyou for using Mathematics Game")
+    
+else :
+    print ("invalid input")
+    print("Thankyou for using Mathematics Game")
 
 #This is for finding Paralellogram related values---(CCJustCodingWithVivek)
 if choice==5:
