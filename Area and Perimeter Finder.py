@@ -4,15 +4,14 @@ from hashlib import new
 from tkinter.messagebox import YES
 
 
-print("\t\tWelcome to this Mathematics Game")
+print("\t\t***Welcome to this Mathematics Game***")
 print("Type 1 for Rectangle related values")
 print("Type 2 for Square related values")
 print("Type 3 for Triangle related values")
-print("type 4 for Circle related values")
-print("type 5 for Paralellogram related values")
-print("type 6 for Trapezium related values")
-print("type 7 for Rhombus related values")
-print("type 8 for Kite related values")
+print("Type 5 for Paralellogram related values")
+print("Type 6 for Trapezium related values")
+print("Type 7 for Rhombus related values")
+print("Type 8 for Kite related values")
 
 Select= int(input("\nEnter Your choice: "))
 choice =Select
@@ -23,11 +22,9 @@ if choice==1:
     l=int(input("\nEnter the length: "))
     b=int(input("Enter the breadth: "))
     print("\nThis the Area of Rectangle: ",l*b)
-    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
-    decision = int(input())
-    new=bool(decision)
-    if new==True:   
-        print("/nThis is the Perimeter of Pectangle: ",2*(l+b))
+    decision = input("\nType Yes For Finding Perimeter else No ")
+    if decision=="Yes":
+        print("\nThis is the Perimeter of Pectangle: ",2*(l+b))
         print("Thankyou for using Mathematics Game")
     else:
         print("Thankyou for using Mathematics Game")
@@ -38,10 +35,8 @@ if choice==2:
     print("You Entered and Finding Square Related Values")
     s=int(input("\nEnter the side length: "))
     print("This the Area of Square: ",s*s)
-    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
-    decision = int(input())
-    two=bool(decision)
-    if two==True:
+    decision = input("\nType Yes For Finding Perimeter else No ")
+    if decision=="Yes":  
         print("/nThis is the Perimeter of Square: ",4*s)
         print("Thankyou for using Mathematics Game")
     else:
@@ -53,10 +48,8 @@ if choice==3:
     b=int(input("\nEnter the base length: "))
     h=int(input("Enter the height: "))
     print("\nThis the Area of Triangle: ",1/2*b*h)
-    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
-    decision = int(input())
-    two=bool(decision)
-    if two==True:
+    decision = input("\nType Yes For Finding Perimeter else No ")
+    if decision=="Yes":
         s1=int(input("Enter 1st Side: "))
         s2=int(input("Enter 2nd Side: "))
         s3=int(input("Enter 3rd Side: "))
@@ -68,43 +61,37 @@ if choice==3:
    
 #This is for finding Circle related values---(CCJustCodingWithVivek)
 if choice==4:
-    d=(input("Do you want to use the value of π in decimal ??(Yes/No) :"))
+    decision=(input("Do you want to use the value of π in decimal ??(Yes/No) :"))
 
-if d=="Yes":
-    print("π = 3.14")
-    x = 3.14
-    r = float(input("Enter the Radius of the Circle: "))
-    area = x*(r**2)
-    print("The Area of the Circle is:",area)
-    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
-    decision = int(input())
-    new =bool(decision)
-    if new==True:
-        radius=int(input("Enter the Radius"))
-        print("/nThis is the Circumfernce of Circle",2*pi*radius)
-        print("Thankyou for using Mathematics Game")
-    elif new==0:
-        print("Thankyou for using Mathematics Game")
+    if decision=="Yes":
+        print("π = 3.14")
+        x = 3.14
+        r = float(input("Enter the Radius of the Circle: "))
+        area = x*(r**2)
+        print("The Area of the Circle is:",area)
+        decision = input("\nType Yes For Finding Perimeter else No ")
+        if decision=="Yes":
+            ("/nThis is the Circumfernce of Circle",2*pi*r)
+            print("Thankyou for using Mathematics Game")
+        elif decision=="No":
+            print("Thankyou for using Mathematics Game")
     
-elif d=="No":
-    print("π = 22/7")
-    pie = 22/7
-    r = float(input("Enter the Radius of the Circle: "))
-    area = float(pie)*float(r)*float(r)
-    print("The Area of the Circle is:",area)
-    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
-    decision = int(input())
-    new =bool(decision)
-    if new==True:
-        radius=int(input("Enter the Radius"))
-        print("/nThis is the Circumfernce of Circle",2*pi*radius)
-        print("Thankyou for using Mathematics Game")
-    elif new==0:
-        print("Thankyou for using Mathematics Game")
+    elif decision=="No":
+        print("π = 22/7")
+        pie = 22/7
+        r = float(input("Enter the Radius of the Circle: "))
+        area = float(pie)*float(r)*float(r)
+        print("The Area of the Circle is:",area)
+        decision = input("\nType Yes For Finding Perimeter else No ")
+        if decision=="Yes":
+            print("/nThis is the Circumfernce of Circle",2*pi*r)
+            print("Thankyou for using Mathematics Game")
+        elif decision=="No":
+            print("Thankyou for using Mathematics Game")
     
-else :
-    print ("invalid input")
-    print("Thankyou for using Mathematics Game")
+        else :
+            print ("invalid input")
+            print("Thankyou for using Mathematics Game")
 
 #This is for finding Paralellogram related values---(CCJustCodingWithVivek)
 if choice==5:
@@ -112,10 +99,8 @@ if choice==5:
     l=int(input("\nEnter the length: "))
     b=int(input("Enter the breadth: "))
     print("\nThis the Area of Paralellogram: ",l*b)
-    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
-    decision = int(input())
-    new=bool(decision)
-    if new==True:   
+    decision = input("\nType Yes For Finding Perimeter else No ")
+    if decision=="Yes": 
         print("\nThis is the Perimeter of Paralellogram: ",2*(l+b))
         print("Thankyou for using Mathematics Game")
     else:
@@ -128,13 +113,11 @@ if choice==6:
     b=int(input("Enter the 2nd Side: "))
     h=int(input("Enter the height: "))
     print("\nThis the Area of Trapezium: ",a+b/2*h )
-    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
-    decision = int(input())
-    new=bool(decision)
-    if new==True:
+    decision = input("\nType Yes For Finding Perimeter else No ")
+    if decision=="Yes":
         c=int(input("Enter the 3rd Side: "))
         d=int(input("Enter the 4th Side: "))   
-        print("\nThis is the Perimeter of Paralellogram: ",a+b+c+d)
+        print("\nThis is the Perimeter of Trapezium: ",a+b+c+d)
         print("Thankyou for using Mathematics Game")
     else:
         print("Thankyou for using Mathematics Game")
@@ -145,10 +128,8 @@ if choice==7:
     d1=int(input("\nEnter the 1st diagonal length: "))
     d2=int(input("Enter the 2nd diagonal length: "))
     print("\nThis the Area of Rhombus: ",d1*d2/2 )
-    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
-    decision = int(input())
-    new=bool(decision)
-    if new==True:
+    decision = input("\nType Yes For Finding Perimeter else No ")
+    if decision=="Yes":
         s=int(input("Enter the Side Length: "))   
         print("\nThis is the Perimeter of Rhombus: ",s*4)
         print("Thankyou for using Mathematics Game")
@@ -161,10 +142,8 @@ if choice==8:
     d1=int(input("\nEnter the 1st diagonal length: "))
     d2=int(input("Enter the 2nd diagonal length: "))
     print("\nThis the Area of Kite: ",d1*d2/2 )
-    print("\nType 1 for Yes For Finding Perimeter else 0 for No ")
-    decision = int(input())
-    new=bool(decision)
-    if new==True:
+    decision = input("\nType Yes For Finding Perimeter else No ")
+    if decision=="Yes":
         s=int(input("Enter the Side Length: "))
         p=int(input("Enter the Side Length: "))   
         print("\nThis is the Perimeter of Kite: ",2*(s+p))
@@ -172,5 +151,5 @@ if choice==8:
     else:
         print("Thankyou for using Mathematics Game")
 
-elif choice>=9:
+else:
     print("\nInvalid input!!!")
